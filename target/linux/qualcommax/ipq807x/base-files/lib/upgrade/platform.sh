@@ -168,6 +168,7 @@ platform_do_upgrade() {
 		;;
 	linksys,homewrk)
 		CI_UBIPART="rootfs"
+		remove_oem_ubi_volume ubi_rootfs
 		nand_do_upgrade "$1"
 		;;
 	linksys,mx4200v1|\
